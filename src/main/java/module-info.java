@@ -1,0 +1,4 @@
+module org.nasdanika.launcher {
+	
+		
+}
