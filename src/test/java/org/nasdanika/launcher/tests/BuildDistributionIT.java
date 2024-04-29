@@ -13,6 +13,8 @@ public class BuildDistributionIT {
 	public void generateLauncher() throws IOException {
 		CommandLine launcherCommandLine = new CommandLine(new LauncherCommand());
 		launcherCommandLine.execute(
+				"-j", "@java",
+//				"-P", "C:/Users/Pavel/Apps/nsd/",
 				"-b", "target/dist", 
 				"-o", "nsd.bat");
 		
