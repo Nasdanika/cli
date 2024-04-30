@@ -14,6 +14,11 @@
 			<artifactId>app-model-gen-cli</artifactId>
 			<version>2024.4.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.nasdanika.models.java</groupId>
+			<artifactId>cli</artifactId>
+			<version>2024.4.0</version>
+		</dependency>
 
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
