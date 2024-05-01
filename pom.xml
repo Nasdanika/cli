@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.nasdanika</groupId>
 	<version>2024.4.0</version>
-	<artifactId>cli</artifactId>
+	<artifactId>cli-launcher</artifactId>
 	<packaging>jar</packaging>
-	<name>Nasdanika command line interface</name>
+	<name>Nasdanika command line interface launcher</name>
 
 	<dependencies>
 		<dependency>
@@ -19,7 +19,6 @@
 			<artifactId>cli</artifactId>
 			<version>2024.4.0</version>
 		</dependency>
-
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-api</artifactId>

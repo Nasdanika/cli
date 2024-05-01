@@ -1,7 +1,10 @@
 package org.nasdanika.launcher.tests;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.nasdanika.cli.Application;
 import org.nasdanika.html.model.app.gen.cli.SiteCommand;
 
 import picocli.CommandLine;
@@ -16,4 +19,14 @@ public class TestCommands {
 		siteCommandLine.execute(args);
 	}
 
+	@Disabled
+	@Test
+	public void testGenerateHelpSite() {
+		ModuleLayer layer = getClass().getModule().getLayer();
+		assertNotNull(layer);
+		String[] args = "-h".split(" ");
+		Application.execute(layer, args);
+	}
+	
+	
 }
