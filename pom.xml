@@ -24,6 +24,12 @@
 			<artifactId>http</artifactId>
 			<version>2024.4.0</version>
 		</dependency>
+		<!-- To prevent slf4j complaining -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-nop</artifactId>
+			<version>1.7.36</version>
+		</dependency>
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-api</artifactId>
