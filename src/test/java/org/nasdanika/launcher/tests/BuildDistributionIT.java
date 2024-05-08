@@ -60,6 +60,7 @@ public class BuildDistributionIT {
 				"-M", "target/dist/modules", 
 				"-m", "org.nasdanika.launcher",
 				"-c", "org.nasdanika.launcher.Launcher",
+				"-j", "#!/bin/bash\n\njava",
 //				"-r", "org.nasdanika.**,com.azure.**,io.netty.**",
 				"-o", "nsd",
 				"-p", ":",
@@ -71,7 +72,7 @@ public class BuildDistributionIT {
 				"-m", "org.nasdanika.launcher",
 				"-c", "org.nasdanika.launcher.Launcher",
 //				"-r", "org.nasdanika.**,com.azure.**,io.netty.**",
-				"-j", "java -Xdebug -Xrunjdwp:transport=dt_socket,address=8998,server=y",
+				"-j", "#!/bin/bash\n\njava -Xdebug -Xrunjdwp:transport=dt_socket,address=8998,server=y",
 				"-o", "nsd-debug",
 				"-p", ":",
 				"-a", "$@");		
