@@ -24,6 +24,12 @@
 			<artifactId>http</artifactId>
 			<version>2024.5.0</version>
 		</dependency>
+		<dependency>			
+			<groupId>org.nasdanika.models.echarts</groupId>
+			<version>2024.5.0</version>
+			<artifactId>graph</artifactId>
+		</dependency>		
+		
 		<!-- To prevent slf4j complaining -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
