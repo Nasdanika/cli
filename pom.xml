@@ -15,6 +15,11 @@
 			<version>2024.5.0</version>
 		</dependency>
 		<dependency>
+			<groupId>org.nasdanika.models.rules</groupId>
+			<artifactId>cli</artifactId>
+			<version>2024.5.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.nasdanika.models.java</groupId>
 			<artifactId>cli</artifactId>
 			<version>2024.5.0</version>
@@ -76,17 +81,39 @@
 			</plugin>
 		        <plugin>
 		            <groupId>org.apache.maven.plugins</groupId>
-		            <artifactId>maven-failsafe-plugin</artifactId>
+	        	    <artifactId>maven-failsafe-plugin</artifactId>
 		            <version>3.2.5</version>
 				    <executions>
 				        <execution>
 				            <goals>
 				                <goal>integration-test</goal>
 				                <goal>verify</goal>
-				            </goals>
+			        	    </goals>
 				        </execution>
 				    </executions>
-		        </plugin>			
+		        </plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.7.1</version>
+				<configuration>
+					<outputDirectory>${project.build.directory}</outputDirectory>
+					<formats>zip</formats>
+					<appendAssemblyId>false</appendAssemblyId>
+					<finalName>nsd-cli-${project.version}</finalName>
+					<descriptors>
+						<descriptor>src/assembly/dist.xml</descriptor>
+					</descriptors>
+				</configuration>
+			        <executions>
+			          <execution>
+			            <id>create-archive</id>
+			            <phase>verify</phase>
+			            <goals>
+			              <goal>single</goal>
+			            </goals>
+			          </execution>
+			        </executions>
+			</plugin>		        			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

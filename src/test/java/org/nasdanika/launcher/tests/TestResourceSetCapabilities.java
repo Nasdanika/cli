@@ -1,6 +1,7 @@
 package org.nasdanika.launcher.tests;
 
 import java.util.Map.Entry;
+import java.util.function.Predicate;
 
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.junit.jupiter.api.Test;
@@ -8,6 +9,7 @@ import org.nasdanika.capability.CapabilityLoader;
 import org.nasdanika.capability.CapabilityProvider;
 import org.nasdanika.capability.ServiceCapabilityFactory;
 import org.nasdanika.capability.ServiceCapabilityFactory.Requirement;
+import org.nasdanika.capability.emf.ResourceSetContributor;
 import org.nasdanika.capability.emf.ResourceSetRequirement;
 import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
@@ -19,12 +21,18 @@ public class TestResourceSetCapabilities {
 		CapabilityLoader capabilityLoader = new CapabilityLoader();
 		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();
 		
-		ResourceSetRequirement serviceRequirement = new ResourceSetRequirement(null, contributor -> {
+		Predicate<ResourceSetContributor> contributorPredicate = contributor -> {
 			System.out.println(contributor);
 			return true;
-		});
+		};
+		ResourceSetRequirement serviceRequirement = new ResourceSetRequirement(null, contributorPredicate);
 		
-		Requirement<ResourceSetRequirement, ResourceSet> requirement = ServiceCapabilityFactory.createRequirement(ResourceSet.class, null, serviceRequirement);		
+		Predicate<ServiceCapabilityFactory<ResourceSetRequirement, ResourceSet>> factoryPredicate = factory -> {
+			System.out.println("*** " + factory);			
+			return true;			
+		};
+		
+		Requirement<ResourceSetRequirement, ResourceSet> requirement = ServiceCapabilityFactory.createRequirement(ResourceSet.class, factoryPredicate, serviceRequirement);		
 		for (CapabilityProvider<?> cp: capabilityLoader.load(requirement, progressMonitor)) {
 			System.out.println(cp);
 			cp.getPublisher().subscribe(rs -> {
@@ -50,7 +58,8 @@ public class TestResourceSetCapabilities {
 		Requirement<ResourceSetRequirement, ResourceSet> requirement = ServiceCapabilityFactory.createRequirement(ResourceSet.class);		
 		for (CapabilityProvider<?> cp: capabilityLoader.load(requirement, progressMonitor)) {
 			System.out.println(cp);
-			cp.getPublisher().subscribe(System.out::println);
+			ResourceSet resourceSet = (ResourceSet) cp.getPublisher().blockFirst();
+			System.out.println(resourceSet);
 		}
 	}
 
