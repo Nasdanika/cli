@@ -1,7 +1,9 @@
 module org.nasdanika.launcher {
 	
-	requires org.nasdanika.cli;
-	requires org.nasdanika.html.model.app.gen.cli;
+	exports org.nasdanika.launcher;
+	
+	requires transitive org.nasdanika.cli;
+	requires transitive org.nasdanika.html.model.app.gen.cli;
 		
 	requires org.nasdanika.models.echarts.graph;
 		
