@@ -20,6 +20,11 @@
 			<version>2024.5.0</version>
 		</dependency>
 		<dependency>
+			<groupId>org.nasdanika.models.rules</groupId>
+			<artifactId>cli</artifactId>
+			<version>2024.5.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>http</artifactId>
 			<version>2024.5.0</version>
