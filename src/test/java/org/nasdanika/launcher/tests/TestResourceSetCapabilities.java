@@ -25,7 +25,7 @@ public class TestResourceSetCapabilities {
 			System.out.println(contributor);
 			return true;
 		};
-		ResourceSetRequirement serviceRequirement = new ResourceSetRequirement(null, contributorPredicate);
+		ResourceSetRequirement serviceRequirement = new ResourceSetRequirement(null, null, contributorPredicate);
 		
 		Predicate<ServiceCapabilityFactory<ResourceSetRequirement, ResourceSet>> factoryPredicate = factory -> {
 			System.out.println("*** " + factory);			
