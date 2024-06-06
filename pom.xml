@@ -40,6 +40,11 @@
 			<version>2024.5.1</version>
 		</dependency>
 		<dependency>
+			<groupId>org.nasdanika.models.architecture</groupId>
+			<artifactId>cli</artifactId>
+			<version>2024.5.1</version>
+		</dependency>
+		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>http</artifactId>
 			<version>2024.5.1</version>
