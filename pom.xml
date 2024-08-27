@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.nasdanika</groupId>
-	<version>2024.7.1</version>
+	<version>2024.8.0</version>
 	<artifactId>cli-launcher</artifactId>
 	<packaging>jar</packaging>
 	<name>Nasdanika CLI launcher</name>
@@ -27,37 +27,37 @@
 		<dependency>
 			<groupId>org.nasdanika.html</groupId>
 			<artifactId>app-model-gen-cli</artifactId>
-			<version>2024.7.1</version>
+			<version>2024.8.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.java</groupId>
 			<artifactId>cli</artifactId>
-			<version>2024.7.1</version>
+			<version>2024.8.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.rules</groupId>
 			<artifactId>cli</artifactId>
-			<version>2024.7.1</version>
+			<version>2024.8.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.architecture</groupId>
-			<artifactId>cli</artifactId>
-			<version>2024.7.1</version>
+			<artifactId>model</artifactId>
+			<version>2024.8.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>http</artifactId>
-			<version>2024.7.1</version>
+			<version>2024.8.0</version>
 		</dependency>
 		<dependency>			
 			<groupId>org.nasdanika.models.echarts</groupId>
 			<artifactId>graph</artifactId>
-			<version>2024.7.1</version>
+			<version>2024.8.0</version>
 		</dependency>		
 		<dependency>			
 			<groupId>org.nasdanika.models.ecore</groupId>
 			<artifactId>cli</artifactId>
-			<version>2024.7.1</version>
+			<version>2024.8.0</version>
 		</dependency>		
 		
 		<!-- To prevent slf4j complaining -->
