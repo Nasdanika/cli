@@ -134,7 +134,7 @@
 					<outputDirectory>${project.build.directory}</outputDirectory>
 					<formats>zip</formats>
 					<appendAssemblyId>false</appendAssemblyId>
-					<finalName>nsd-cli-${project.version}</finalName>
+					<finalName>nsd-cli</finalName>
 					<attach>false</attach>
 					<descriptors>
 						<descriptor>src/assembly/dist.xml</descriptor>
