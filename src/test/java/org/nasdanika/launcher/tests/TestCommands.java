@@ -13,7 +13,6 @@ import org.icepear.echarts.charts.graph.GraphSeries;
 import org.icepear.echarts.components.series.SeriesLabel;
 import org.icepear.echarts.render.Engine;
 import org.jgrapht.alg.drawing.FRLayoutAlgorithm2D;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.common.Context;
 import org.nasdanika.models.echarts.graph.Graph;
@@ -94,7 +93,6 @@ public class TestCommands {
 	 * @throws IOException 
 	 */
 	@Test
-	@Disabled // Fails in GitHub actions for some reason
 	public void testModuleGraph() throws IOException {
 		Module thisModule = getClass().getModule();
 		ModuleLayer moduleLayer = thisModule.getLayer();
@@ -158,15 +156,17 @@ public class TestCommands {
 			Item otherCategory) {
 		ModuleDescriptor moduleDescriptor = module.getDescriptor();		
 		Node moduleNode = getModuleNode(module, layer, graph, nsdCategory, eclipseCategory, javaCategory, otherCategory);
-		for (Requires req: moduleDescriptor.requires()) {
-			Optional<Module> rmo = layer.findModule(req.name());
-			if (rmo.isPresent()) {
-				Node reqNode = moduleToNode(rmo.get(), layer, graph, nsdCategory, eclipseCategory, javaCategory, otherCategory);
-				org.nasdanika.models.echarts.graph.Link reqLink = GraphFactory.eINSTANCE.createLink();				
-				reqLink.setTarget(reqNode);
-				moduleNode.getOutgoingLinks().add(reqLink);
+		if (moduleNode != null) {
+			for (Requires req: moduleDescriptor.requires()) {
+				Optional<Module> rmo = layer.findModule(req.name());
+				if (rmo.isPresent()) {
+					Node reqNode = moduleToNode(rmo.get(), layer, graph, nsdCategory, eclipseCategory, javaCategory, otherCategory);
+					org.nasdanika.models.echarts.graph.Link reqLink = GraphFactory.eINSTANCE.createLink();				
+					reqLink.setTarget(reqNode);
+					moduleNode.getOutgoingLinks().add(reqLink);
+				}
 			}
-		}		
+		}
 		return moduleNode;
 	}
 	
@@ -178,13 +178,17 @@ public class TestCommands {
 			Item eclipseCategory,
 			Item javaCategory,
 			Item otherCategory) {
+		String moduleName = module.getName();
+		if (moduleName == null) {
+			return null;
+		}
 		for (Node n: graph.getNodes()) {
-			if (n.getName().equals(module.getName())) {
+			if (n.getName().equals(moduleName)) {
 				return n;
 			}
 		}
 		Node ret = GraphFactory.eINSTANCE.createNode();
-		ret.setName(module.getName());
+		ret.setName(moduleName);
 		
 		if (ret.getName().startsWith("org.nasdanika.")) {
 			ret.setCategory(nsdCategory);
