@@ -21,6 +21,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B verify --file pom.xml
+    - name: Build with Maven
+      run: |
+        mkdir target/pages
+        cp target/nsd-cli.zip target/pages
 
 # Deployment to pages
     - name: Setup Pages
@@ -28,7 +32,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: 'target/nsd-cli.zip'
+        path: 'target/pages'
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
