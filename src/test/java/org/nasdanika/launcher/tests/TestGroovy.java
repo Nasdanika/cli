@@ -8,6 +8,7 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 import org.junit.jupiter.api.Test;
+import org.nasdanika.common.Invocable;
 
 public class TestGroovy {
 	
@@ -40,5 +41,27 @@ public class TestGroovy {
 			}
 		}
 	}
+	
+	@Test
+	public void testAnomymous() throws ScriptException {
+		String source = """
+				new org.nasdanika.common.Invocable() {
+				
+				  def invoke(Object... args) {
+				  	System.out.println(args);
+				  	args[0] + 55;
+				  }
+				
+				}
+				
+				"""; 
+		
+		ScriptEngineManager sem = new ScriptEngineManager();
+		ScriptEngine scriptEngine = sem.getEngineByName("groovy");
+		Object result = scriptEngine.eval(source);
+		Object resultResult = ((Invocable) result).invoke(33);
+		System.out.println(resultResult);		
+	}
+	
 
 }
