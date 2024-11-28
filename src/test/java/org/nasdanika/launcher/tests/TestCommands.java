@@ -143,7 +143,7 @@ public class TestCommands {
 				.compose(Context.singleton("graphContainerId", "graph-container"))
 				.interpolateToString(GRAPH_TEMPLATE);
 	    
-	    Files.writeString(new File("target/module-graph.html").toPath(), chartHTML);
+	    Files.writeString(new File("target/module-graph.html").getCanonicalFile().toPath(), chartHTML);
 	}
 	
 	private Node moduleToNode(
