@@ -2,6 +2,7 @@ package org.nasdanika.launcher.tests;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
+import java.sql.ResultSetMetaData;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -63,5 +64,9 @@ public class TestGroovy {
 		System.out.println(resultResult);		
 	}
 	
+	@Test 
+	public void testResultSetMetadata() {
+		System.out.println(ResultSetMetaData.class.getModule().getName());
+	}
 
 }

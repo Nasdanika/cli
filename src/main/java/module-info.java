@@ -9,5 +9,6 @@ module org.nasdanika.launcher {
 	requires transitive org.nasdanika.models.ecore.cli;
 		
 	requires org.nasdanika.models.echarts.graph;
+	requires java.sql;
 		
 }
