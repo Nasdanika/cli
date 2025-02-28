@@ -282,5 +282,13 @@
 			</distributionManagement>	
 		</profile>
 	</profiles>
+        
+    <!-- For picocli 4.7.7-SNAPSHOT -->    
+    <repositories>
+        <repository>
+            <id>nasdanika-snapshots</id>
+            <url>https://snapshots.maven.nasdanika.org/</url>
+        </repository>
+    </repositories> 
 
 </project>
