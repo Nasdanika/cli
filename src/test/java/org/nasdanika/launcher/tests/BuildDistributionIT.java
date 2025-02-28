@@ -39,6 +39,7 @@ public class BuildDistributionIT {
 				"-j", "@java",
 				"-m", "org.nasdanika.launcher",
 				"-c", "org.nasdanika.launcher.Launcher",
+				"--add-modules", "ALL-SYSTEM",
 				"-f", "options",
 //				"-r", "org.nasdanika.**,com.azure.**,io.netty.**",
 				"-b", "target/dist", 
@@ -48,6 +49,7 @@ public class BuildDistributionIT {
 		launcherCommandLine.execute(
 				"-m", "org.nasdanika.launcher",
 				"-c", "org.nasdanika.launcher.Launcher",
+				"--add-modules", "ALL-SYSTEM",
 				"-j", "@java -Xdebug -Xrunjdwp:transport=dt_socket,address=8998,server=y",
 				"-f", "options",
 //				"-r", "org.nasdanika.**,com.azure.**,io.netty.**",
