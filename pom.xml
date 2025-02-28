@@ -287,7 +287,7 @@
     <repositories>
         <repository>
             <id>nasdanika-snapshots</id>
-            <url>https://snapshots.maven.nasdanika.org/</url>
+            <url>https://maven.nasdanika.org/snapshots</url>
         </repository>
     </repositories> 
 
