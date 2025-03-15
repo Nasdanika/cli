@@ -74,6 +74,11 @@
 			<artifactId>cli</artifactId>
 			<version>2025.2.0</version>
 		</dependency>
+        <dependency>            
+            <groupId>org.nasdanika.models.crew-ai</groupId>
+            <artifactId>cli</artifactId>
+            <version>2025.3.0</version>
+        </dependency>
 		<dependency>
 		    <groupId>org.apache.groovy</groupId>
 		    <artifactId>groovy-all</artifactId>
