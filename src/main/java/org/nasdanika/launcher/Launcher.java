@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.nasdanika.capability.CapabilityFactory;
 import org.nasdanika.capability.CapabilityLoader;
 import org.nasdanika.capability.CapabilityProvider;
 import org.nasdanika.capability.ServiceCapabilityFactory;
@@ -41,13 +40,7 @@ public class Launcher {
 				if (rootCommand instanceof Closeable) {
 					((Closeable) rootCommand).close(progressMonitor.split("Closing root command", 1));
 				}
-				
-				// Closing factories
-				for (CapabilityFactory<Object, Object> cf: capabilityLoader.getFactories()) {
-					if (cf instanceof Closeable) {
-						((Closeable) cf).close(progressMonitor.split("Closing capability factory", 1));
-					}
-				}
+				capabilityLoader.close(progressMonitor.split("Closing capability loader", 1));
 			}
 			System.exit(exitCode);
 		}
