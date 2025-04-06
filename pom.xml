@@ -82,8 +82,8 @@
 		</dependency>
 		
         <dependency>
-            <groupId>org.nasdanika.core</groupId>
-            <artifactId>telemetry</artifactId>
+            <groupId>org.nasdanika.ai</groupId>
+            <artifactId>mcp</artifactId>
             <version>2025.3.0</version>
         </dependency>
 
