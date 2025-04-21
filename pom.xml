@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.nasdanika</groupId>
-	<version>2025.3.0</version>
+	<version>2025.4.0</version>
 	<artifactId>cli-launcher</artifactId>
 	<packaging>jar</packaging>
 	<name>Nasdanika CLI launcher</name>
@@ -27,52 +27,52 @@
 		<dependency>
 			<groupId>org.nasdanika.models.app</groupId>
 			<artifactId>cli</artifactId>
-			<version>2025.3.0</version>
+			<version>2025.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.java</groupId>
 			<artifactId>cli</artifactId>
-			<version>2025.3.0</version>
+			<version>2025.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.rules</groupId>
 			<artifactId>cli</artifactId>
-			<version>2025.3.0</version>
+			<version>2025.4.0</version>
 		</dependency>
         <dependency>
             <groupId>org.nasdanika.models.crew-ai</groupId>
             <artifactId>cli</artifactId>
-            <version>2025.3.0</version>
+            <version>2025.4.0</version>
         </dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.architecture</groupId>
 			<artifactId>model</artifactId>
-			<version>2025.3.0</version>
+			<version>2025.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>http</artifactId>
-			<version>2025.3.0</version>
+			<version>2025.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>groovy</artifactId>
-			<version>2025.3.0</version>
+			<version>2025.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>maven</artifactId>
-			<version>2025.3.0</version>
+			<version>2025.4.0</version>
 		</dependency>
 		<dependency>			
 			<groupId>org.nasdanika.models.echarts</groupId>
 			<artifactId>graph</artifactId>
-			<version>2025.3.0</version>
+			<version>2025.4.0</version>
 		</dependency>		
 		<dependency>			
 			<groupId>org.nasdanika.models.ecore</groupId>
 			<artifactId>cli</artifactId>
-			<version>2025.3.0</version>
+			<version>2025.4.0</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.apache.groovy</groupId>
