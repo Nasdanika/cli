@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.nasdanika</groupId>
-	<version>2025.5.0</version>
+	<version>2025.6.0</version>
 	<artifactId>cli-launcher</artifactId>
 	<packaging>jar</packaging>
 	<name>Nasdanika CLI launcher</name>
@@ -24,60 +24,73 @@
 	<url>https://github.com/Nasdanika/cli</url>	
 
 	<dependencies>
+
+        <!-- Forcing SLF4j version -->	
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.17</version>
+        </dependency>       
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>2.0.17</version>
+        </dependency>    
+	
 		<dependency>
 			<groupId>org.nasdanika.models.app</groupId>
 			<artifactId>cli</artifactId>
-			<version>2025.5.0</version>
+			<version>2025.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.java</groupId>
 			<artifactId>cli</artifactId>
-			<version>2025.5.0</version>
+			<version>2025.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.rules</groupId>
 			<artifactId>cli</artifactId>
-			<version>2025.5.0</version>
+			<version>2025.6.0</version>
 		</dependency>
         <dependency>
             <groupId>org.nasdanika.models.crew-ai</groupId>
             <artifactId>cli</artifactId>
-            <version>2025.5.0</version>
+            <version>2025.6.0</version>
         </dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.architecture</groupId>
 			<artifactId>model</artifactId>
-			<version>2025.5.0</version>
+			<version>2025.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>http</artifactId>
-			<version>2025.5.0</version>
+			<version>2025.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>groovy</artifactId>
-			<version>2025.5.0</version>
+			<version>2025.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>maven</artifactId>
-			<version>2025.5.0</version>
+			<version>2025.6.0</version>
 		</dependency>
 		<dependency>			
 			<groupId>org.nasdanika.models.echarts</groupId>
 			<artifactId>graph</artifactId>
-			<version>2025.5.0</version>
+			<version>2025.6.0</version>
 		</dependency>		
 		<dependency>			
 			<groupId>org.nasdanika.models.ecore</groupId>
 			<artifactId>cli</artifactId>
-			<version>2025.5.0</version>
+			<version>2025.6.0</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.apache.groovy</groupId>
 		    <artifactId>groovy-all</artifactId>
-		    <version>4.0.26</version>
+		    <version>4.0.27</version>
 		    <type>pom</type>
 		</dependency>
 
@@ -90,13 +103,13 @@
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-api</artifactId>
-		    <version>5.11.4</version>
+		    <version>5.12.1</version>
 		    <scope>test</scope>
 		</dependency>		
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-engine</artifactId>
-		    <version>5.11.4</version>
+		    <version>5.12.1</version>
 		    <scope>test</scope>
 		</dependency>		
 	</dependencies>
@@ -149,7 +162,7 @@
 		        <plugin>
 		            <groupId>org.apache.maven.plugins</groupId>
 	        	    <artifactId>maven-failsafe-plugin</artifactId>
-		            <version>3.5.2</version>
+		            <version>3.5.3</version>
 				    <executions>
 				        <execution>
 				            <goals>
@@ -162,7 +175,7 @@
 		                <dependency>
 		                    <groupId>org.junit.jupiter</groupId>
 		                    <artifactId>junit-jupiter-engine</artifactId>
-		                    <version>5.11.4</version>
+		                    <version>5.12.1</version>
 		                </dependency>
 		            </dependencies>
 		        </plugin>
