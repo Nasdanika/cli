@@ -144,6 +144,20 @@
 							<includeScope>runtime</includeScope>
 						</configuration>
 					</execution>
+                    <execution>
+                        <id>copy-dependencies-win</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>
+                                ${project.build.directory}/dist-win/lib
+                            </outputDirectory>
+                            <useRepositoryLayout>true</useRepositoryLayout>
+                            <includeScope>runtime</includeScope>
+                        </configuration>
+                    </execution>
 				</executions>
 			</plugin>
 		        <plugin>

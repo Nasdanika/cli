@@ -84,5 +84,51 @@ public class BuildDistributionIT {
 				"-a", "$@");		
 		
 	}
-
+		
+	@Test
+	public void generateWindowsLauncher() throws IOException {
+		for (File tf: new File("target").listFiles()) {
+			if (tf.getName().endsWith(".jar") && !tf.getName().endsWith("-sources.jar") && !tf.getName().endsWith("-javadoc.jar")) {
+				Files.copy(
+						tf.toPath(), 
+						new File(new File("target/dist-win/lib"), tf.getName()).toPath(), 
+						StandardCopyOption.REPLACE_EXISTING);		
+			}
+		}	
+		
+		ModuleLayer layer = Launcher.class.getModule().getLayer();
+		try (Writer writer = new FileWriter(new File("target/dist-win/modules"))) {
+			for (String name: layer.modules().stream().map(Module::getName).sorted().toList()) {
+				writer.write(name);
+				writer.write(System.lineSeparator());
+			};
+		}
+		
+		CommandLine launcherCommandLine = new CommandLine(new LauncherCommand());
+		launcherCommandLine.execute(
+				"-j", "@%~dp0\\jdk\\bin\\java.exe",
+				"-m", "org.nasdanika.launcher",
+				"-c", "org.nasdanika.launcher.Launcher",
+				"--add-modules", "ALL-SYSTEM",
+				"-f", "options",
+	//			"-r", "org.nasdanika.**,com.azure.**,io.netty.**",
+				"-b", "target/dist-win", 
+				"-M", "target/dist-win/modules", 
+				"-p", ";",
+				"-o", "nsd.bat");
+		
+		launcherCommandLine.execute(
+				"-m", "org.nasdanika.launcher",
+				"-c", "org.nasdanika.launcher.Launcher",
+				"--add-modules", "ALL-SYSTEM",
+				"-j", "@%~dp0\\jdk\\bin\\java.exe -Xdebug -Xrunjdwp:transport=dt_socket,address=8998,server=y",
+				"-f", "options",
+	//			"-r", "org.nasdanika.**,com.azure.**,io.netty.**",
+				"-b", "target/dist-win", 
+				"-M", "target/dist-win/modules", 
+				"-p", ";",
+				"-o", "nsd-debug.bat");
+		
+	}
+	
 }
