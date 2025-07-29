@@ -1,0 +1,359 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.nasdanika:cli-launcher >---------------------
+[INFO] Building Nasdanika CLI launcher 2025.7.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.8.1:tree (default-cli) @ cli-launcher ---
+[INFO] org.nasdanika:cli-launcher:jar:2025.7.0
+[INFO] +- org.slf4j:slf4j-api:jar:2.0.17:compile
+[INFO] +- org.slf4j:jul-to-slf4j:jar:2.0.17:compile
+[INFO] +- org.nasdanika.models.app:cli:jar:2025.7.0:compile
+[INFO] |  +- org.nasdanika.core:cli:jar:2025.7.0:compile
+[INFO] |  |  +- info.picocli:picocli:jar:4.7.7-SNAPSHOT:compile
+[INFO] |  |  +- org.nasdanika.core:telemetry:jar:2025.7.0:compile
+[INFO] |  |  |  +- io.opentelemetry:opentelemetry-sdk-extension-autoconfigure:jar:1.51.0:compile
+[INFO] |  |  |  |  +- io.opentelemetry:opentelemetry-sdk:jar:1.51.0:compile
+[INFO] |  |  |  |  |  \- io.opentelemetry:opentelemetry-sdk-common:jar:1.51.0:compile
+[INFO] |  |  |  |  \- io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi:jar:1.51.0:compile
+[INFO] |  |  |  +- io.opentelemetry:opentelemetry-exporter-logging:jar:1.51.0:compile
+[INFO] |  |  |  +- io.opentelemetry:opentelemetry-exporter-otlp:jar:1.51.0:compile
+[INFO] |  |  |  |  +- io.opentelemetry:opentelemetry-sdk-trace:jar:1.51.0:compile
+[INFO] |  |  |  |  +- io.opentelemetry:opentelemetry-sdk-metrics:jar:1.51.0:compile
+[INFO] |  |  |  |  +- io.opentelemetry:opentelemetry-sdk-logs:jar:1.51.0:compile
+[INFO] |  |  |  |  +- io.opentelemetry:opentelemetry-exporter-otlp-common:jar:1.51.0:runtime
+[INFO] |  |  |  |  |  \- io.opentelemetry:opentelemetry-exporter-common:jar:1.51.0:runtime
+[INFO] |  |  |  |  \- io.opentelemetry:opentelemetry-exporter-sender-okhttp:jar:1.51.0:runtime
+[INFO] |  |  |  |     \- com.squareup.okhttp3:okhttp:jar:4.12.0:runtime
+[INFO] |  |  |  |        +- com.squareup.okio:okio:jar:3.6.0:runtime
+[INFO] |  |  |  |        |  \- com.squareup.okio:okio-jvm:jar:3.6.0:runtime
+[INFO] |  |  |  |        |     \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.10:runtime
+[INFO] |  |  |  |        \- org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:runtime
+[INFO] |  |  |  |           +- org.jetbrains.kotlin:kotlin-stdlib:jar:1.8.21:runtime
+[INFO] |  |  |  |           \- org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:runtime
+[INFO] |  |  |  \- io.opentelemetry.instrumentation:opentelemetry-logback-appender-1.0:jar:2.16.0-alpha:runtime
+[INFO] |  |  |     +- io.opentelemetry.instrumentation:opentelemetry-instrumentation-api:jar:2.16.0:runtime
+[INFO] |  |  |     |  +- io.opentelemetry:opentelemetry-api-incubator:jar:1.50.0-alpha:runtime
+[INFO] |  |  |     |  \- io.opentelemetry.semconv:opentelemetry-semconv:jar:1.32.0:runtime
+[INFO] |  |  |     +- io.opentelemetry.instrumentation:opentelemetry-instrumentation-api-incubator:jar:2.16.0-alpha:runtime
+[INFO] |  |  |     \- io.opentelemetry:opentelemetry-api:jar:1.50.0:compile
+[INFO] |  |  |        \- io.opentelemetry:opentelemetry-context:jar:1.50.0:compile
+[INFO] |  |  +- org.nasdanika.core:drawio:jar:2025.7.0:compile
+[INFO] |  |  |  \- org.nasdanika.core:mapping:jar:2025.7.0:compile
+[INFO] |  |  \- org.jline:jline:jar:3.30.4:compile
+[INFO] |  \- org.nasdanika.models.app:graph:jar:2025.7.0:compile
+[INFO] |     +- org.nasdanika.core:graph:jar:2025.7.0:compile
+[INFO] |     \- org.nasdanika.models.app:gen:jar:2025.7.0:compile
+[INFO] |        +- org.nasdanika.models.app:model:jar:2025.7.0:compile
+[INFO] |        |  \- org.nasdanika.models.bootstrap:model:jar:2025.7.0:compile
+[INFO] |        |     \- org.nasdanika.models.html:model:jar:2025.7.0:compile
+[INFO] |        +- org.nasdanika.models.bootstrap:gen:jar:2025.7.0:compile
+[INFO] |        |  +- org.nasdanika.html:bootstrap:jar:2025.7.0:compile
+[INFO] |        |  \- org.nasdanika.models.html:gen:jar:2025.7.0:compile
+[INFO] |        |     \- org.nasdanika.core:exec-gen:jar:2025.7.0:compile
+[INFO] |        |        \- org.nasdanika.core:ncore-gen:jar:2025.7.0:compile
+[INFO] |        +- org.nasdanika.html:jstree:jar:2025.7.0:compile
+[INFO] |        +- org.nasdanika.models.app:emf:jar:2025.7.0:compile
+[INFO] |        \- com.github.dfabulich:sitemapgen4j:jar:1.1.2:compile
+[INFO] +- org.nasdanika.models.java:cli:jar:2025.7.0:compile
+[INFO] |  +- org.apache.maven:maven-model:jar:3.9.10:compile
+[INFO] |  |  \- org.codehaus.plexus:plexus-utils:jar:3.6.0:compile
+[INFO] |  +- org.nasdanika.models.gitlab:cli:jar:2025.7.0:compile
+[INFO] |  |  \- org.nasdanika.models.gitlab:model:jar:2025.7.0:compile
+[INFO] |  |     +- org.gitlab4j:gitlab4j-api:jar:5.8.0:compile
+[INFO] |  |     |  +- jakarta.activation:jakarta.activation-api:jar:1.2.2:compile
+[INFO] |  |     |  +- org.glassfish.jersey.inject:jersey-hk2:jar:2.39.1:compile
+[INFO] |  |     |  |  +- org.glassfish.jersey.core:jersey-common:jar:2.39.1:compile
+[INFO] |  |     |  |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  |     |  |  |  \- org.glassfish.hk2:osgi-resource-locator:jar:1.0.3:compile
+[INFO] |  |     |  |  \- org.glassfish.hk2:hk2-locator:jar:2.6.1:compile
+[INFO] |  |     |  |     +- org.glassfish.hk2.external:aopalliance-repackaged:jar:2.6.1:compile
+[INFO] |  |     |  |     +- org.glassfish.hk2:hk2-api:jar:2.6.1:compile
+[INFO] |  |     |  |     \- org.glassfish.hk2:hk2-utils:jar:2.6.1:compile
+[INFO] |  |     |  +- org.glassfish.jersey.core:jersey-client:jar:2.39.1:compile
+[INFO] |  |     |  |  +- jakarta.ws.rs:jakarta.ws.rs-api:jar:2.1.6:compile
+[INFO] |  |     |  |  \- org.glassfish.hk2.external:jakarta.inject:jar:2.6.1:compile
+[INFO] |  |     |  +- org.glassfish.jersey.connectors:jersey-apache-connector:jar:2.39.1:compile
+[INFO] |  |     |  +- org.glassfish.jersey.media:jersey-media-multipart:jar:2.39.1:compile
+[INFO] |  |     |  |  \- org.jvnet.mimepull:mimepull:jar:1.9.15:compile
+[INFO] |  |     |  +- org.glassfish.jersey.media:jersey-media-json-jackson:jar:2.39.1:compile
+[INFO] |  |     |  |  +- org.glassfish.jersey.ext:jersey-entity-filtering:jar:2.39.1:compile
+[INFO] |  |     |  |  \- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.14.1:compile
+[INFO] |  |     |  |     \- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
+[INFO] |  |     |  \- jakarta.servlet:jakarta.servlet-api:jar:4.0.4:compile
+[INFO] |  |     \- org.nasdanika.core:emf:jar:2025.7.0:compile
+[INFO] |  |        +- org.eclipse.jgit:org.eclipse.jgit:jar:7.3.0.202506031305-r:compile
+[INFO] |  |        |  \- com.googlecode.javaewah:JavaEWAH:jar:1.2.3:compile
+[INFO] |  |        \- org.apache.poi:poi-ooxml:jar:5.4.1:compile
+[INFO] |  |           +- org.apache.poi:poi:jar:5.4.1:compile
+[INFO] |  |           |  +- org.apache.commons:commons-math3:jar:3.6.1:compile
+[INFO] |  |           |  \- com.zaxxer:SparseBitSet:jar:1.3:compile
+[INFO] |  |           +- org.apache.poi:poi-ooxml-lite:jar:5.4.1:compile
+[INFO] |  |           +- org.apache.xmlbeans:xmlbeans:jar:5.3.0:compile
+[INFO] |  |           +- org.apache.commons:commons-compress:jar:1.27.1:compile
+[INFO] |  |           +- commons-io:commons-io:jar:2.18.0:compile
+[INFO] |  |           +- com.github.virtuald:curvesapi:jar:1.08:compile
+[INFO] |  |           +- org.apache.logging.log4j:log4j-api:jar:2.24.3:compile
+[INFO] |  |           \- org.apache.commons:commons-collections4:jar:4.4:compile
+[INFO] |  +- org.nasdanika.models.java:model:jar:2025.7.0:compile
+[INFO] |  |  +- org.nasdanika.models.source:model:jar:2025.7.0:compile
+[INFO] |  |  +- org.nasdanika.models.coverage:model:jar:2025.7.0:compile
+[INFO] |  |  |  \- org.jacoco:org.jacoco.core:jar:0.8.12:compile
+[INFO] |  |  |     \- org.ow2.asm:asm-commons:jar:9.7:compile
+[INFO] |  |  \- com.github.javaparser:javaparser-symbol-solver-core:jar:3.26.4:compile
+[INFO] |  |     +- org.javassist:javassist:jar:3.30.2-GA:compile
+[INFO] |  |     \- com.google.guava:guava:jar:33.4.0-jre:compile
+[INFO] |  |        +- com.google.guava:failureaccess:jar:1.0.2:compile
+[INFO] |  |        +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  |        +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  |        +- org.checkerframework:checker-qual:jar:3.43.0:compile
+[INFO] |  |        +- com.google.errorprone:error_prone_annotations:jar:2.36.0:compile
+[INFO] |  |        \- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile
+[INFO] |  \- com.azure:azure-ai-openai:jar:1.0.0-beta.16:compile
+[INFO] |     +- com.azure:azure-core:jar:1.55.3:compile
+[INFO] |     |  +- com.azure:azure-json:jar:1.5.0:compile
+[INFO] |     |  +- com.azure:azure-xml:jar:1.2.0:compile
+[INFO] |     |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.17.2:compile
+[INFO] |     |  +- com.fasterxml.jackson.core:jackson-core:jar:2.17.2:compile
+[INFO] |     |  \- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.17.2:compile
+[INFO] |     \- com.azure:azure-core-http-netty:jar:1.15.11:compile
+[INFO] |        +- io.netty:netty-handler:jar:4.1.118.Final:compile
+[INFO] |        +- io.netty:netty-handler-proxy:jar:4.1.118.Final:compile
+[INFO] |        |  \- io.netty:netty-codec-socks:jar:4.1.118.Final:compile
+[INFO] |        +- io.netty:netty-buffer:jar:4.1.118.Final:compile
+[INFO] |        +- io.netty:netty-codec:jar:4.1.118.Final:compile
+[INFO] |        +- io.netty:netty-transport-native-unix-common:jar:4.1.118.Final:compile
+[INFO] |        +- io.netty:netty-transport-native-kqueue:jar:osx-x86_64:4.1.118.Final:compile
+[INFO] |        |  \- io.netty:netty-transport-classes-kqueue:jar:4.1.118.Final:compile
+[INFO] |        +- io.netty:netty-tcnative-boringssl-static:jar:2.0.70.Final:compile
+[INFO] |        |  +- io.netty:netty-tcnative-classes:jar:2.0.70.Final:compile
+[INFO] |        |  +- io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.70.Final:compile
+[INFO] |        |  +- io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.70.Final:compile
+[INFO] |        |  +- io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.70.Final:compile
+[INFO] |        |  +- io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.70.Final:compile
+[INFO] |        |  \- io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.70.Final:compile
+[INFO] |        \- io.netty:netty-common:jar:4.1.118.Final:compile
+[INFO] +- org.nasdanika.models.rules:cli:jar:2025.7.0:compile
+[INFO] |  \- org.nasdanika.models.rules:processors:jar:2025.7.0:compile
+[INFO] |     +- org.nasdanika.models.rules:model:jar:2025.7.0:compile
+[INFO] |     +- org.nasdanika.models.ecore:graph:jar:2025.7.0:compile
+[INFO] |     |  +- org.nasdanika.core:diagram:jar:2025.7.0:compile
+[INFO] |     |  +- commons-codec:commons-codec:jar:1.18.0:compile
+[INFO] |     |  +- org.eclipse.emf:org.eclipse.emf.codegen:jar:2.26.0:compile
+[INFO] |     |  |  +- org.eclipse.platform:org.eclipse.core.runtime:jar:3.33.100:compile
+[INFO] |     |  |  |  +- org.eclipse.platform:org.eclipse.osgi:jar:3.23.100:compile
+[INFO] |     |  |  |  +- org.eclipse.platform:org.eclipse.equinox.common:jar:3.20.100:compile
+[INFO] |     |  |  |  +- org.eclipse.platform:org.eclipse.core.jobs:jar:3.15.600:compile
+[INFO] |     |  |  |  +- org.eclipse.platform:org.eclipse.equinox.registry:jar:3.12.400:compile
+[INFO] |     |  |  |  +- org.eclipse.platform:org.eclipse.equinox.preferences:jar:3.11.400:compile
+[INFO] |     |  |  |  |  \- org.osgi:org.osgi.service.prefs:jar:1.1.2:compile
+[INFO] |     |  |  |  |     \- org.osgi:osgi.annotation:jar:8.0.1:compile
+[INFO] |     |  |  |  +- org.eclipse.platform:org.eclipse.core.contenttype:jar:3.9.600:compile
+[INFO] |     |  |  |  \- org.eclipse.platform:org.eclipse.equinox.app:jar:1.7.400:compile
+[INFO] |     |  |  +- org.eclipse.platform:org.eclipse.core.resources:jar:3.22.200:compile
+[INFO] |     |  |  |  +- org.eclipse.platform:org.eclipse.core.expressions:jar:3.9.400:compile
+[INFO] |     |  |  |  +- org.eclipse.platform:org.eclipse.core.filesystem:jar:1.11.200:compile
+[INFO] |     |  |  |  |  \- net.java.dev.jna:jna-platform:jar:5.17.0:compile
+[INFO] |     |  |  |  \- net.java.dev.jna:jna:jar:5.17.0:compile
+[INFO] |     |  |  +- org.eclipse.jdt:org.eclipse.jdt.core:jar:3.42.0:compile
+[INFO] |     |  |  |  \- org.eclipse.jdt:ecj:jar:3.42.0:compile
+[INFO] |     |  |  +- org.eclipse.jdt:org.eclipse.jdt.launching:jar:3.23.300:compile
+[INFO] |     |  |  |  +- org.eclipse.platform:org.eclipse.core.variables:jar:3.6.500:compile
+[INFO] |     |  |  |  +- org.eclipse.jdt:org.eclipse.jdt.launching.macosx:jar:3.6.300:compile
+[INFO] |     |  |  |  \- org.eclipse.jdt:org.eclipse.jdt.debug:jar:3.23.0:compile
+[INFO] |     |  |  +- org.eclipse.platform:org.eclipse.debug.core:jar:3.23.0:compile
+[INFO] |     |  |  \- org.eclipse.platform:org.eclipse.text:jar:3.14.300:compile
+[INFO] |     |  |     \- org.eclipse.platform:org.eclipse.core.commands:jar:3.12.300:compile
+[INFO] |     |  \- org.eclipse.emf:org.eclipse.emf.codegen.ecore:jar:2.42.0:compile
+[INFO] |     \- org.nasdanika.models.architecture:processors:jar:2025.7.0:compile
+[INFO] |        \- org.nasdanika.models.graph:processors:jar:2025.7.0:compile
+[INFO] |           \- org.nasdanika.models.ncore:processors:jar:2025.7.0:compile
+[INFO] +- org.nasdanika.models.crew-ai:cli:jar:2025.7.0:compile
+[INFO] |  \- org.nasdanika.models.crew-ai:doc:jar:2025.7.0:compile
+[INFO] |     \- org.nasdanika.models.crew-ai:ecore:jar:2025.7.0:compile
+[INFO] |        \- org.nasdanika.models.crew-ai:model:jar:2025.7.0:compile
+[INFO] |           \- org.nasdanika.models.python:model:jar:2025.7.0:compile
+[INFO] +- org.nasdanika.models.architecture:model:jar:2025.7.0:compile
+[INFO] |  +- org.nasdanika.core:graph-model:jar:2025.7.0:compile
+[INFO] |  |  +- org.nasdanika.core:drawio-model:jar:2025.7.0:compile
+[INFO] |  |  \- org.nasdanika.core:exec:jar:2025.7.0:compile
+[INFO] |  +- org.nasdanika.models.party:model:jar:2025.7.0:compile
+[INFO] |  \- org.eclipse.emf:org.eclipse.emf.ecore:jar:2.39.0:compile
+[INFO] |     \- org.eclipse.emf:org.eclipse.emf.common:jar:2.42.0:compile
+[INFO] +- org.nasdanika.core:http:jar:2025.7.0:compile
+[INFO] |  \- io.projectreactor.netty:reactor-netty-http:jar:1.2.6:compile
+[INFO] |     +- io.netty:netty-codec-http:jar:4.1.121.Final:compile
+[INFO] |     |  \- io.netty:netty-transport:jar:4.1.121.Final:compile
+[INFO] |     +- io.netty:netty-codec-http2:jar:4.1.121.Final:compile
+[INFO] |     +- io.netty:netty-resolver-dns:jar:4.1.121.Final:compile
+[INFO] |     |  +- io.netty:netty-resolver:jar:4.1.121.Final:compile
+[INFO] |     |  \- io.netty:netty-codec-dns:jar:4.1.121.Final:compile
+[INFO] |     +- io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.121.Final:compile
+[INFO] |     |  \- io.netty:netty-resolver-dns-classes-macos:jar:4.1.121.Final:compile
+[INFO] |     +- io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.121.Final:compile
+[INFO] |     |  \- io.netty:netty-transport-classes-epoll:jar:4.1.121.Final:compile
+[INFO] |     +- io.projectreactor.netty:reactor-netty-core:jar:1.2.6:compile
+[INFO] |     \- io.projectreactor:reactor-core:jar:3.7.6:compile
+[INFO] |        \- org.reactivestreams:reactive-streams:jar:1.0.4:compile
+[INFO] +- org.nasdanika.core:groovy:jar:2025.7.0:compile
+[INFO] |  \- org.apache.groovy:groovy-groovysh:jar:4.0.27:compile
+[INFO] |     \- jline:jline:jar:2.14.6:compile
+[INFO] +- org.nasdanika.core:maven:jar:2025.7.0:compile
+[INFO] |  +- org.apache.maven.resolver:maven-resolver-supplier:jar:1.9.23:compile
+[INFO] |  |  +- org.apache.maven.resolver:maven-resolver-api:jar:1.9.23:compile
+[INFO] |  |  +- org.apache.maven.resolver:maven-resolver-util:jar:1.9.23:compile
+[INFO] |  |  +- org.apache.maven.resolver:maven-resolver-spi:jar:1.9.23:compile
+[INFO] |  |  +- org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.23:compile
+[INFO] |  |  +- org.apache.maven.resolver:maven-resolver-impl:jar:1.9.23:compile
+[INFO] |  |  +- org.apache.maven.resolver:maven-resolver-connector-basic:jar:1.9.23:compile
+[INFO] |  |  +- org.apache.maven.resolver:maven-resolver-transport-file:jar:1.9.23:compile
+[INFO] |  |  +- org.apache.maven.resolver:maven-resolver-transport-http:jar:1.9.23:compile
+[INFO] |  |  |  +- org.apache.httpcomponents:httpclient:jar:4.5.14:compile
+[INFO] |  |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.16:compile
+[INFO] |  |  |  \- org.slf4j:jcl-over-slf4j:jar:1.7.36:runtime
+[INFO] |  |  +- org.apache.maven:maven-resolver-provider:jar:3.9.9:compile
+[INFO] |  |  |  \- org.apache.maven:maven-repository-metadata:jar:3.9.9:compile
+[INFO] |  |  \- org.apache.maven:maven-model-builder:jar:3.9.9:compile
+[INFO] |  |     +- org.codehaus.plexus:plexus-interpolation:jar:1.27:compile
+[INFO] |  |     +- org.apache.maven:maven-artifact:jar:3.9.9:compile
+[INFO] |  |     \- org.apache.maven:maven-builder-support:jar:3.9.9:compile
+[INFO] |  \- org.nasdanika.core:capability:jar:2025.7.0:compile
+[INFO] |     \- org.nasdanika.core:common:jar:2025.7.0:compile
+[INFO] |        +- org.eclipse.emf:org.eclipse.emf.ecore.xmi:jar:2.39.0:compile
+[INFO] |        +- org.json:json:jar:20250517:compile
+[INFO] |        +- org.yaml:snakeyaml:jar:2.4:compile
+[INFO] |        +- org.jsoup:jsoup:jar:1.20.1:compile
+[INFO] |        +- com.vladsch.flexmark:flexmark-all:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-abbreviation:jar:0.64.8:compile
+[INFO] |        |  |  \- com.vladsch.flexmark:flexmark-util:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-admonition:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-anchorlink:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-aside:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-attributes:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-autolink:jar:0.64.8:compile
+[INFO] |        |  |  \- org.nibor.autolink:autolink:jar:0.6.0:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-definition:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-emoji:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-enumerated-reference:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-escaped-character:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-footnotes:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-gfm-issues:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-gfm-strikethrough:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-gfm-tasklist:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-gfm-users:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-gitlab:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-jekyll-front-matter:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-jekyll-tag:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-media-tags:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-resizable-image:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-macros:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-ins:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-xwiki-macros:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-superscript:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-tables:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-toc:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-typographic:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-wikilink:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-yaml-front-matter:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-ext-youtube-embedded:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-html2md-converter:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-jira-converter:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-pdf-converter:jar:0.64.8:compile
+[INFO] |        |  |  +- com.ibm.icu:icu4j:jar:72.1:compile
+[INFO] |        |  |  +- com.openhtmltopdf:openhtmltopdf-core:jar:1.0.10:compile
+[INFO] |        |  |  +- com.openhtmltopdf:openhtmltopdf-pdfbox:jar:1.0.10:compile
+[INFO] |        |  |  |  +- org.apache.pdfbox:pdfbox:jar:2.0.24:compile
+[INFO] |        |  |  |  |  +- org.apache.pdfbox:fontbox:jar:2.0.24:compile
+[INFO] |        |  |  |  |  \- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |        |  |  |  +- org.apache.pdfbox:xmpbox:jar:2.0.24:compile
+[INFO] |        |  |  |  \- de.rototor.pdfbox:graphics2d:jar:0.32:compile
+[INFO] |        |  |  \- com.openhtmltopdf:openhtmltopdf-rtl-support:jar:1.0.10:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-profile-pegdown:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-util-ast:jar:0.64.8:compile
+[INFO] |        |  |  \- org.jetbrains:annotations:jar:24.0.1:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-util-builder:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-util-collection:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-util-data:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-util-dependency:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-util-format:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-util-html:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-util-misc:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-util-options:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-util-sequence:jar:0.64.8:compile
+[INFO] |        |  +- com.vladsch.flexmark:flexmark-util-visitor:jar:0.64.8:compile
+[INFO] |        |  \- com.vladsch.flexmark:flexmark-youtrack-converter:jar:0.64.8:compile
+[INFO] |        +- org.apache.commons:commons-lang3:jar:3.17.0:compile
+[INFO] |        +- org.apache.commons:commons-text:jar:1.13.1:compile
+[INFO] |        +- net.sourceforge.plantuml:plantuml-epl:jar:1.2024.5:compile
+[INFO] |        +- org.springframework:spring-expression:jar:6.2.8:compile
+[INFO] |        |  \- org.springframework:spring-core:jar:6.2.8:compile
+[INFO] |        |     \- org.springframework:spring-jcl:jar:6.2.8:compile
+[INFO] |        \- ch.qos.logback:logback-classic:jar:1.5.18:compile
+[INFO] |           \- ch.qos.logback:logback-core:jar:1.5.18:compile
+[INFO] +- org.nasdanika.models.echarts:graph:jar:2025.7.0:compile
+[INFO] |  +- org.jgrapht:jgrapht-core:jar:1.5.2:compile
+[INFO] |  |  +- org.jheaps:jheaps:jar:0.14:compile
+[INFO] |  |  \- org.apfloat:apfloat:jar:1.10.1:compile
+[INFO] |  +- org.nasdanika.core:ncore:jar:2025.7.0:compile
+[INFO] |  |  \- org.nasdanika.core:persistence:jar:2025.7.0:compile
+[INFO] |  |     \- org.nasdanika.core:resources:jar:2025.7.0:compile
+[INFO] |  +- org.nasdanika.html:3d-force-graph:jar:2025.7.0:compile
+[INFO] |  |  \- org.nasdanika.html:html:jar:2025.7.0:compile
+[INFO] |  \- org.icepear.echarts:echarts-java:jar:1.0.7:compile
+[INFO] |     +- com.google.code.gson:gson:jar:2.8.9:compile
+[INFO] |     +- com.github.jknack:handlebars:jar:4.2.1:compile
+[INFO] |     \- org.slf4j:slf4j-simple:jar:1.7.25:compile
+[INFO] +- org.nasdanika.models.ecore:cli:jar:2025.7.0:compile
+[INFO] |  \- org.nasdanika.models.ecore:processors-doc:jar:2025.7.0:compile
+[INFO] +- org.apache.groovy:groovy-all:pom:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-ant:jar:4.0.27:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.10.15:compile
+[INFO] |  |  +- org.apache.ant:ant-junit:jar:1.10.15:compile
+[INFO] |  |  +- org.apache.ant:ant-launcher:jar:1.10.15:compile
+[INFO] |  |  \- org.apache.ant:ant-antlr:jar:1.10.15:compile
+[INFO] |  +- org.apache.groovy:groovy-cli-picocli:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-console:jar:4.0.27:compile
+[INFO] |  |  +- com.github.javaparser:javaparser-core:jar:3.26.4:compile
+[INFO] |  |  +- org.ow2.asm:asm-util:jar:9.8:compile
+[INFO] |  |  |  +- org.ow2.asm:asm:jar:9.8:compile
+[INFO] |  |  |  +- org.ow2.asm:asm-tree:jar:9.8:compile
+[INFO] |  |  |  \- org.ow2.asm:asm-analysis:jar:9.8:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.5.3:compile
+[INFO] |  |  \- org.abego.treelayout:org.abego.treelayout.core:jar:1.0.3:compile
+[INFO] |  +- org.apache.groovy:groovy-datetime:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-docgenerator:jar:4.0.27:compile
+[INFO] |  |  \- com.thoughtworks.qdox:qdox:jar:1.12.1:compile
+[INFO] |  +- org.apache.groovy:groovy-groovydoc:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-jmx:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-json:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-jsr223:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-macro:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-nio:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-servlet:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-sql:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-swing:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-templates:jar:4.0.27:compile
+[INFO] |  +- org.apache.groovy:groovy-test:jar:4.0.27:compile
+[INFO] |  |  \- junit:junit:jar:4.13.2:compile
+[INFO] |  |     \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] |  +- org.apache.groovy:groovy-test-junit5:jar:4.0.27:compile
+[INFO] |  |  \- org.junit.platform:junit-platform-launcher:jar:1.12.2:compile
+[INFO] |  +- org.apache.groovy:groovy-xml:jar:4.0.27:compile
+[INFO] |  \- org.apache.groovy:groovy-yaml:jar:4.0.27:compile
+[INFO] |     +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.18.3:compile
+[INFO] |     \- com.fasterxml.jackson.core:jackson-databind:jar:2.18.3:compile
+[INFO] +- org.junit.platform:junit-platform-engine:jar:1.12.1:test
+[INFO] |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO] |  +- org.junit.platform:junit-platform-commons:jar:1.12.1:test
+[INFO] |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] +- org.junit.jupiter:junit-jupiter-api:jar:5.12.1:test
+[INFO] \- org.junit.jupiter:junit-jupiter-engine:jar:5.12.1:test
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.428 s
+[INFO] Finished at: 2025-07-27T15:45:02-04:00
+[INFO] ------------------------------------------------------------------------
