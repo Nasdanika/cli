@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-	<appender name="file" class="ch.qos.logback.core.FileAppender">
-	    <file>nsd.log</file>
-	    <append>true</append>
-        <encoder>
-            <pattern>%d{yyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg %kvp{DOUBLE}%n</pattern>
-        </encoder>
-	</appender>    
-    <appender name="OpenTelemetry"
-              class="io.opentelemetry.instrumentation.logback.appender.v1_0.OpenTelemetryAppender">
-        <captureExperimentalAttributes>true</captureExperimentalAttributes>
-        <captureKeyValuePairAttributes>true</captureKeyValuePairAttributes>
-    </appender>
-    <root level="INFO">
-        <appender-ref ref="file"/>
-        <appender-ref ref="OpenTelemetry"/>
-    </root>
+  <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>logs/nsd.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>logs/nsd.%d{yyyy-MM-dd}.log</fileNamePattern>
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%d{yyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg %kvp{DOUBLE}%n</pattern>
+    </encoder>
+  </appender>  
+  <appender name="OpenTelemetry"
+    class="io.opentelemetry.instrumentation.logback.appender.v1_0.OpenTelemetryAppender">
+      <captureExperimentalAttributes>true</captureExperimentalAttributes>
+      <captureKeyValuePairAttributes>true</captureKeyValuePairAttributes>
+  </appender>
+  <root level="INFO">
+    <appender-ref ref="ROLLING"/>
+    <appender-ref ref="OpenTelemetry"/>
+  </root>
 </configuration>

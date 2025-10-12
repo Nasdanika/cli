@@ -8,12 +8,14 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.common.Invocable;
 
 public class TestGroovy {
 	
 	@Test
+	@Disabled
 	public void testAnnotations() throws ScriptException {
 		String source = """
 				
@@ -44,6 +46,7 @@ public class TestGroovy {
 	}
 	
 	@Test
+	@Disabled
 	public void testAnomymous() throws ScriptException {
 		String source = """
 				new org.nasdanika.common.Invocable() {

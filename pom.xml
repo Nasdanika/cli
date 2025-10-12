@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.nasdanika</groupId>
-	<version>2025.7.0</version>
+	<version>2025.10.0</version>
 	<artifactId>cli-launcher</artifactId>
 	<packaging>jar</packaging>
 	<name>Nasdanika CLI launcher</name>
@@ -40,12 +40,12 @@
 		<dependency>
 			<groupId>org.nasdanika.models.app</groupId>
 			<artifactId>cli</artifactId>
-			<version>2025.7.0</version>
+			<version>2025.10.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.java</groupId>
 			<artifactId>cli</artifactId>
-			<version>2025.7.0</version>
+			<version>2025.10.0</version>
 		</dependency>
 		<!--
 		<dependency>
@@ -57,66 +57,55 @@
         <dependency>
             <groupId>org.nasdanika.models.crew-ai</groupId>
             <artifactId>cli</artifactId>
-            <version>2025.7.0</version>
+            <version>2025.10.0</version>
         </dependency>
         <dependency>
             <groupId>org.nasdanika.models.sql</groupId>
             <artifactId>cli</artifactId>
-            <version>2025.9.0</version>
+            <version>2025.10.0</version>
         </dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.architecture</groupId>
 			<artifactId>model</artifactId>
-			<version>2025.7.0</version>
+			<version>2025.10.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>http</artifactId>
-			<version>2025.7.0</version>
+			<version>2025.10.0</version>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>groovy</artifactId>
-			<version>2025.7.0</version>
+			<version>2025.10.0</version>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>maven</artifactId>
-			<version>2025.7.0</version>
+			<version>2025.10.0</version>
 		</dependency>
 		<dependency>			
 			<groupId>org.nasdanika.models.echarts</groupId>
 			<artifactId>graph</artifactId>
-			<version>2025.7.0</version>
+			<version>2025.10.0</version>
 		</dependency>		
 		<dependency>			
 			<groupId>org.nasdanika.models.ecore</groupId>
 			<artifactId>cli</artifactId>
-			<version>2025.7.0</version>
+			<version>2025.10.0</version>
 		</dependency>
-		<dependency>
-		    <groupId>org.apache.groovy</groupId>
-		    <artifactId>groovy-all</artifactId>
-		    <version>4.0.27</version>
-		    <type>pom</type>
-		</dependency>
-
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-engine</artifactId>
-            <version>1.12.1</version>
-            <scope>test</scope>
-        </dependency>
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-api</artifactId>
-		    <version>5.12.1</version>
+		    <version>6.0.0</version>
 		    <scope>test</scope>
 		</dependency>		
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-engine</artifactId>
-		    <version>5.12.1</version>
+		    <version>6.0.0</version>
 		    <scope>test</scope>
 		</dependency>		
 	</dependencies>
@@ -135,7 +124,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.8.1</version>
+				<version>3.9.0</version>
 				<executions>
 					<execution>
 						<id>copy-dependencies</id>
@@ -170,20 +159,13 @@
 		        <plugin>
 		            <groupId>org.apache.maven.plugins</groupId>
 		            <artifactId>maven-surefire-plugin</artifactId>
-		            <version>3.5.2</version>
-		            <dependencies>
-		                <dependency>
-		                    <groupId>org.junit.jupiter</groupId>
-		                    <artifactId>junit-jupiter-engine</artifactId>
-		                    <version>5.11.4</version>
-		                </dependency>
-		            </dependencies>
+		            <version>3.5.4</version>
 		        </plugin>
 
 		        <plugin>
 		            <groupId>org.apache.maven.plugins</groupId>
 	        	    <artifactId>maven-failsafe-plugin</artifactId>
-		            <version>3.5.3</version>
+		            <version>3.5.4</version>
 				    <executions>
 				        <execution>
 				            <goals>
@@ -192,13 +174,6 @@
 			        	    </goals>
 				        </execution>
 				    </executions>
-		            <dependencies>
-		                <dependency>
-		                    <groupId>org.junit.jupiter</groupId>
-		                    <artifactId>junit-jupiter-engine</artifactId>
-		                    <version>5.12.1</version>
-		                </dependency>
-		            </dependencies>
 		        </plugin>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
@@ -248,7 +223,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.11.2</version>			
+				<version>3.12.0</version>			
 				<executions>
 					<execution>
 						<id>attach-javadocs</id>
@@ -303,7 +278,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>3.2.7</version>
+						<version>3.2.8</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
@@ -317,7 +292,7 @@
 					<plugin>					
 						<groupId>org.sonatype.central</groupId>
 						<artifactId>central-publishing-maven-plugin</artifactId>
-						<version>0.8.0</version>
+						<version>0.9.0</version>
 						<extensions>true</extensions>
 						<configuration>
 							<publishingServerId>central</publishingServerId>
