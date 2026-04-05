@@ -12,7 +12,6 @@ import org.eclipse.xtext.resource.XtextResourceSet;
 import org.nasdanika.capability.CapabilityLoader;
 import org.nasdanika.cli.CommandGroup;
 import org.nasdanika.cli.ParentCommands;
-import org.nasdanika.cli.ResourceSetMixIn;
 import org.nasdanika.cli.RootCommand;
 import org.nasdanika.common.Description;
 import org.nasdanika.common.EModelElementSupplier;
@@ -21,7 +20,6 @@ import org.nasdanika.common.ProgressMonitor;
 import com.google.inject.Injector;
 
 import picocli.CommandLine.Command;
-import picocli.CommandLine.Mixin;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
@@ -31,7 +29,7 @@ import picocli.CommandLine.Parameters;
 		mixinStandardHelpOptions = true,
 		name = "xcore")
 @ParentCommands(RootCommand.class)
-@Description(icon = "https://docs.nasdanika.org/images/xcore-logo-g.svg")
+@Description(icon = "https://docs.nasdanika.org/images/xcore-logo-g.png")
 public class XcoreCommand extends CommandGroup implements EModelElementSupplier<EModelElement> {
 	
 	protected XcoreCommand() {
