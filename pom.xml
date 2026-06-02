@@ -63,6 +63,16 @@
 			<artifactId>cli</artifactId>
 			<version>2026.2.0</version>
 		</dependency>
+        <dependency>
+            <groupId>org.nasdanika.models.product-management</groupId>
+            <artifactId>doc</artifactId>
+            <version>2026.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.nasdanika.models.markdown</groupId>
+            <artifactId>filters</artifactId>
+            <version>2026.2.0</version>
+        </dependency>
 		<!--
 		<dependency>
 			<groupId>org.nasdanika.models.rules</groupId>
